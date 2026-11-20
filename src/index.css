@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.625rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Studio-Dark: tiefes Graugrün, Lime-Akzent */
+    --background: 150 10% 5.5%;
+    --foreground: 140 12% 92%;
+    --card: 150 9% 8%;
+    --card-foreground: 140 12% 92%;
+    --popover: 150 10% 7%;
+    --popover-foreground: 140 12% 92%;
+    --primary: 78 85% 55%;
+    --primary-foreground: 140 40% 6%;
+    --secondary: 150 7% 13%;
+    --secondary-foreground: 140 12% 88%;
+    --muted: 150 7% 12%;
+    --muted-foreground: 145 6% 58%;
+    --accent: 78 60% 16%;
+    --accent-foreground: 80 80% 72%;
+    --destructive: 4 72% 52%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 150 8% 15%;
+    --input: 150 8% 17%;
+    --ring: 78 85% 55%;
+    --radius: 0.5rem;
+    --sidebar-background: 150 10% 6%;
+    --sidebar-foreground: 140 12% 90%;
+    --sidebar-primary: 78 85% 55%;
+    --sidebar-primary-foreground: 140 40% 6%;
+    --sidebar-accent: 150 7% 13%;
+    --sidebar-accent-foreground: 140 12% 88%;
+    --sidebar-border: 150 8% 14%;
+    --sidebar-ring: 78 85% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    font-family: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: 'ss01' on, 'cv05' on;
+  }
+  .font-data,
+  code,
+  kbd,
+  pre {
+    font-family: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+    font-feature-settings: normal;
+  }
+}
